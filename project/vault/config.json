@@ -1,0 +1,5 @@
+{
+  "track": true,
+  "tags": ["template", "scaffold"],
+  "notes": "Project-template repo. project/vault/ ships the Obsidian project-management vault (dev-item board + note templates) that generated projects inherit. metadata.json / config.json live here in the vault so Obsidian can read them directly and project-registry discovers them via its shallowest-file scan."
+}

@@ -1,0 +1,23 @@
+[project]
+name = "devenv-development"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+# Runtime is stdlib-only by default: the installer (install.py), the router
+# (main.py), and the seed libs (db=sqlite3, logs=logging) need no third-party
+# deps. Opt into the extras below per project; feature code that needs them can
+# `uv sync --extra <name>`.
+dependencies = []
+
+[project.optional-dependencies]
+ux = ["rich>=13.0", "questionary>=2.0"]
+servers = ["fastapi>=0.115", "uvicorn>=0.30"]
+db = ["psycopg2-binary>=2.9"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
